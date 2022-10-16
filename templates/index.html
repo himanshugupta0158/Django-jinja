@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<h1>Detail View</h1>
+
+View number {{number}}
+
+
+{{thing}} <br />
+
+
+<table>
+{% for row in data %}
+    <tr {% if loop.index is divisibleby 3 %}class = "different_color"{% endif %} >
+        <td>{{ row.name }}</td>
+        <td>{{ row.count }}</td>
+    </tr>
+{% endfor %}
+
+</table>
+
+{% endblock content %}

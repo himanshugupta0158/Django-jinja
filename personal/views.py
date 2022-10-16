@@ -13,12 +13,23 @@ from django.middleware.csrf import get_token
 
 
 def Env_setUp(template_path):
+    """
+    Using this when using flask and jinja
+    this one does not need much changes.
+    """
     return Environment(
         loader = FileSystemLoader(str(template_path)),
         autoescape = select_autoescape()
     )
 
 def Env_setUp2(template_path):
+    """
+    Use this when using Django and jinja
+    For this :
+    1.> create jinja2.py file in root directory and put requred code in it 
+    2.> makes changes in template of settings.py
+    3.> from root_directory.jinja2 import environment <- use this environment instead of ENvironment else some code will not work.
+    """
     return environment(
         loader = FileSystemLoader(str(template_path)),
         autoescape = select_autoescape()

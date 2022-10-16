@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .template{
+            background-color: #ebf6fa;
+            border: 1px solid black;
+            padding: 5px;
+            width: 414px;
+            margin-top: 40px;
+            font-family: sans-serif;
+        }
+
+        #text,#sub-text,#time,#number{
+            text-align: center;
+        }
+        #sub-text{
+            font-size: medium;
+            margin-top: -10px;
+        }
+        #number{
+            font-size: xxx-large;
+            letter-spacing: 20px;
+            padding-left: 6%;
+        }
+        img{
+            padding-left: 17%;
+        }
+        h1 {
+          font-size: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="template">
+        <div class="header">
+            <h1 style="text-align: center;">Welcome</h1>
+        </div>
+        <div>
+            <img src="cid:Mascot.png" alt="beewer_image">
+        </div>
+        <div>
+            <h2 id="text"><b>Here is your Verification Code</b></h2>
+            <p id="sub-text">to validate your email address</p>
+            <h1 id="number">{{otp}}</h1>
+        </div>
+        <div>
+            <h3 id="bottom-text" style="text-align: center; color: red; font-size: small;">Valid for 5 minutes from<br>{{time}}</h3>
+        </div>
+    </div>
+</body>
+</html>
